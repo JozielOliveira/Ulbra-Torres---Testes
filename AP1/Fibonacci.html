@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Fibonacci() {
+            var vet = [];
+            var num = document.getElementById('numero').value;
+            var i = 2;
+            var a = 0;
+            var b = 0;
+            switch (num) {
+                case "1":
+                    vet.push(1);
+                    break;
+                case "2":
+                    vet.push(1, 1);
+                    break;
+                case "":
+                    vet = ["Digite um Numero!!!"]
+                    break;
+                default:
+                    vet.push(1, 1);
+                    do {
+                        a = i - 1;
+                        b = i - 2;
+                        vet.push(vet[a] + vet[b]);
+                        i++;
+                    } while (i < num)
+                    break;
+            }
+            document.getElementById('resultado').innerHTML = vet;
+        }
+
+        function Pesq_fibonacci() {
+            var vet = [];
+            var num = document.getElementById('numero').value;
+            var i = 2;
+            var a = 0;
+            var b = 0;
+            var l = 0;
+            switch (num) {
+                case "1":
+                    vet.push(1);
+                    break;
+                case "2":
+                    vet.push(1, 1);
+                    break;
+                case "":
+                    vet = ["Digite um Numero!!!"]
+                    break;
+                default:
+                    vet.push(1, 1);
+                    do {
+                        a = i - 1;
+                        b = i - 2;
+                        vet.push(vet[a] + vet[b]);
+                        l = vet[a] + vet[b];
+                        i++;
+                    } while (l < num)
+                    if (num == l) {
+                        vet = ['Sim está na lista de Fibonacci na Id ' + vet.length + ' => ' + vet];
+                    } else {
+                        vet = ['Não está na lista de Fibonacci  ' + vet];
+                    }
+                    break;
+            }
+
+            document.getElementById('resultado').innerHTML = vet;
+        }
+    </script>
+    <input type="number" id="numero">
+    <button onclick="Fibonacci()">Fibonacci</button>
+    <button onclick="Pesq_fibonacci()">Pesquisar</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
