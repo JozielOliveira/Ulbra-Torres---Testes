@@ -6,16 +6,16 @@ class CalculadoraTop{
         string Comando = "";
 
         do{
-            Escrever("--------Introdução a Computação--------");
-            Escrever(" 1 - Calculadora");
-            Escrever(" 2 - Média");
-            Escrever(" 3 - Tabuada");
-            Escrever(" 4 - IMC");
-            Escrever(" 0 - Fechar");
-            Escrever("---------------------------------------");
+            Console.WriteLine("--------Introdução a Computação--------");
+            Console.WriteLine(" 1 - Calculadora");
+            Console.WriteLine(" 2 - Média");
+            Console.WriteLine(" 3 - Tabuada");
+            Console.WriteLine(" 4 - IMC");
+            Console.WriteLine(" 0 - Fechar");
+            Console.WriteLine("---------------------------------------");
 
             do{
-                Comando = Ler();
+                Comando = Console.ReadLine();
             }while((Comando != "1") & (Comando != "2") & (Comando != "3") & (Comando != "4") & (Comando != "0"));
 
             if (Comando != "0"){
@@ -102,12 +102,12 @@ class CalculadoraTop{
             int Tabuada = 0;
 
             Console.WriteLine("Qual a tabuada você quer saber:");
-            Tabuada = int.Parse(Ler());
+            Tabuada = int.Parse(Console.ReadLine());
 
             
                 for(int cont = 0; 10 >= cont; cont++){
 
-                    Escrever(Tabuada+" x "+cont+" = "+ OperacãoAritimetica(Tabuada,cont,"*"));
+                    Console.WriteLine(Tabuada+" x "+cont+" = "+ OperacãoAritimetica(Tabuada,cont,"*"));
 
                 } 
 
@@ -123,20 +123,20 @@ class CalculadoraTop{
             double imc = 0;
 
             Console.WriteLine("Qual a altura: ");
-            altura = float.Parse(Ler());
+            altura = float.Parse(Console.ReadLine());
             Console.WriteLine("Qual o peso:");
-            peso = float.Parse(Ler());
+            peso = float.Parse(Console.ReadLine());
 
             imc = peso/Math.Pow(2,altura);
             
             if(imc<18.5){
-                Escrever("Abaixo do peso ideal  "+Math.Round(imc, 1));
+                Console.WriteLine("Abaixo do peso ideal  "+Math.Round(imc, 1));
             }else if(imc<25){
-                Escrever("Peso ideal  "+Math.Round(imc, 1));
+                Console.WriteLine("Peso ideal  "+Math.Round(imc, 1));
             }else if(imc<30){
-                Escrever("Acima do Peso  "+Math.Round(imc, 1));
+                Console.WriteLine("Acima do Peso  "+Math.Round(imc, 1));
             }else{
-                Escrever("Obeso  "+Math.Round(imc, 1));
+                Console.WriteLine("Obeso  "+Math.Round(imc, 1));
             }
 
         } while (ContinuaWhile()); 
@@ -160,9 +160,9 @@ class CalculadoraTop{
     static bool ContinuaWhile(){
             string Comando = "";
 
-            Escrever("Digite um 'voltar' para voltar ao inicio");
-            Escrever("De enter para continuar com a tabuada");    
-            Comando = Ler();
+            Console.WriteLine("Digite um 'voltar' para voltar ao inicio");
+            Console.WriteLine("De enter para continuar");    
+            Comando = Console.ReadLine();
             Console.Clear();
 
             if(Comando != "voltar"){
@@ -170,20 +170,6 @@ class CalculadoraTop{
             }else{
                 return false;
             }
-    }
-
-//------------------------COMANDOS AUXILIARES-----------------------------------//
-
-    static void Escrever(string ParTexto){
-        Console.WriteLine(ParTexto);
-    }
-
-    static string Ler(){
-        return Console.ReadLine();
-    }
-
-    static void Parar(){
-        Console.ReadLine();
     }
 
 }
