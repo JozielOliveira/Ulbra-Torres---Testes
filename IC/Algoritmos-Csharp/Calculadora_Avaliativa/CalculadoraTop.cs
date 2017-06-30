@@ -14,9 +14,9 @@ class CalculadoraTop{
             Console.WriteLine(" 0 - Fechar");
             Console.WriteLine("---------------------------------------");
 
-            do{
+            do{ 
                 Comando = Console.ReadLine();
-            }while((Comando != "1") & (Comando != "2") & (Comando != "3") & (Comando != "4") & (Comando != "0"));
+            }while(ContinuaMenu(Comando));
 
             if (Comando != "0"){
                 Console.Clear();
@@ -27,6 +27,14 @@ class CalculadoraTop{
     }
 
 //--------------------------------------------------
+    static bool ContinuaMenu(string Comando){
+        if((Comando != "1") & (Comando != "2") & (Comando != "3") & (Comando != "4") & (Comando != "0")){
+            Console.WriteLine("Comando errado");
+            return true;
+        }else{
+            return false;
+        }
+    }
     static bool Operacão(string Operacao){
         switch (Operacao)
         {
@@ -60,11 +68,11 @@ class CalculadoraTop{
             Console.WriteLine("Digite um Numero:");
             N2 = float.Parse(Console.ReadLine());
 
-            Result = OperacãoAritimetica(N1,N2,Operacao);
+            Result = OperacaoAritimetica(N1,N2,Operacao);
             
             Console.WriteLine(" "+N1+" "+Operacao+" "+N2+" = "+ Result);
 
-        } while (ContinuaWhile());         
+        } while (ContinuaWhile("a Calculadora"));         
 
         return true;
     }
@@ -90,7 +98,7 @@ class CalculadoraTop{
                 Console.WriteLine("Estuda mais pois sua Média é " + Media); 
             }
             
-        } while (ContinuaWhile());
+        } while (ContinuaWhile("a Media"));
 
         return true;
 
@@ -107,11 +115,11 @@ class CalculadoraTop{
             
                 for(int cont = 0; 10 >= cont; cont++){
 
-                    Console.WriteLine(Tabuada+" x "+cont+" = "+ OperacãoAritimetica(Tabuada,cont,"*"));
+                    Console.WriteLine(Tabuada+" x "+cont+" = "+ OperacaoAritimetica(Tabuada,cont,"*"));
 
                 } 
 
-        } while (ContinuaWhile()); 
+        } while (ContinuaWhile("a Tabuada")); 
 
         return true;
     }
@@ -139,12 +147,12 @@ class CalculadoraTop{
                 Console.WriteLine("Obeso  "+Math.Round(imc, 1));
             }
 
-        } while (ContinuaWhile()); 
+        } while (ContinuaWhile("o IMC")); 
         
             return true;
     }
 
-    static float OperacãoAritimetica(float N1,float N2,string Operacao){
+    static float OperacaoAritimetica(float N1,float N2,string Operacao){
         switch (Operacao)
         {
             case "+" : return N1 + N2;
@@ -157,11 +165,11 @@ class CalculadoraTop{
         }
     }
 
-    static bool ContinuaWhile(){
+    static bool ContinuaWhile(string operacao){
             string Comando = "";
 
-            Console.WriteLine("Digite um 'voltar' para voltar ao inicio");
-            Console.WriteLine("De enter para continuar");    
+            Console.WriteLine("Digite um 'voltar' para voltar ao Menu e de Enter");
+            Console.WriteLine("Ou apenas de enter para continuar com "+operacao);    
             Comando = Console.ReadLine();
             Console.Clear();
 
