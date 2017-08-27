@@ -1,0 +1,40 @@
+.tabelas{
+  display: flex;
+}
+table{
+  width: 100%;
+  border-color: #999;
+}
+thead{
+  background: white;
+
+}
+.tabela-de-classificacao tr{
+  box-shadow : 0px 1px #999;
+}
+.td1{
+  background: #f5f5f5;
+}
+.center{
+  text-align: center;
+}
+.id{
+  color: blue;
+}
+.ponto{
+  font-weight: bold;
+}
+.tabela-de-classificacao{
+  width: 70%;
+  margin: 3px;
+}
+.tabela-de-classificacao thead{
+    color: #999;
+}
+.tabela-das-rodas{
+  margin: 3px;
+  width: 30%;
+}
+.tabela-das-rodas td{
+  width: 30%;
+}
