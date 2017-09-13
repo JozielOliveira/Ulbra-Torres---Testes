@@ -1,0 +1,30 @@
+1-
+Infraestrutura de uma Software House
+Hardware
+Parte que trata toda a dimensão de computadores, teclados, mouses, a parte
+física para manter a software house em funcionamento.
+Software
+Os softwares necessários (sistemas operacionais, sistemas aplicativos... etc)
+juntamente com o licenciamento dos mesmos.
+Gerenciamento e Armazenamento de dados
+Banco de dados, SGBDs, parte na qual trata os dados da empresa toda (dados
+da empresa, dados dos clientes dados dos serviços ... etc).
+Suporte
+Serve para solucionar os problemas, incluindo os internos como, cabeamento,
+hardware, software, rede, etc. quanto os problemas dos clientes (outra parte do
+suporte).
+Rede
+Toda a estrutura de cabeamento e comunicação que uma empresa deve ter.
+Desenvolvimento
+Grupo de desenvolvedores para manter ou criar novos produtos do software
+house.
+Projetos
+Equipe que busca os dados, tem a ideia, busca soluções. etc.
+
+2-
+Temos um exemplo bem comum, a internet onde o cliente usa o browser para fazer uma
+requisição do servidor web, e este servidor envia uma resposta como por
+exemplo uma página HTML, onde o browser carrega-a e a exiba na tela do
+cliente.
+
+3-
