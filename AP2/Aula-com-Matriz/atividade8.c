@@ -2,13 +2,16 @@
 int main(){
     int matriz [10][3];
     int valor = 0;
-    int l = 0;
+    int ll = 0;
+    int cc = 0;
+    int aux;
 
-        while( l < 10 ){
-
+        for(int l = 0; l< 10; l++){
             for(int c = 0; c < 3; c++){
                 printf("Matriz [%i][%i] : ",l,c);
                 scanf("%i",&valor);
+                
+                cc = c;
 
                 if(valor == 0)
                      break;
@@ -16,24 +19,27 @@ int main(){
                 matriz[l][c] = valor;
 
             } 
-
-            l++;
-            
+            ll = l;
             if(valor == 0)
-                break; 
+                break;
+           
         }
 
-        l ++;
+        ll ++;
 
         printf("\nMATRIZ RESUTANTE:\n");
-    
-        for(int li = 0; li< l; li++){
 
-           for(int c = 0; c < 3; c++){
-                if(matriz[li][c] == 0)
-                    break;
-                printf(" %i ",matriz[li][c]);
-            }
+        
+            
+        for(int l = 0; l< ll; l++){
+
+            if(l == (ll-1))
+                aux = cc;
+            else
+                aux =3;
+            
+           for(int c = 0; c < aux; c++)
+                printf(" %i ",matriz[l][c]);
             
             printf("\n\n");
         }
